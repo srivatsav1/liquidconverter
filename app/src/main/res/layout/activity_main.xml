@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="tamukmobileapp.liquidconverter.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14pt"
+        android:text="Liquid Converter"
+        android:id="@+id/title"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+
+        android:layout_gravity="center" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        1<EditText
+            android:layout_width="45pt"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:id="@+id/input" />
+        <EditText
+            android:layout_width="45pt"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45pt"
+            android:id="@+id/result" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="174dp"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textSize="10pt"
+            android:text="Input Unit"
+            android:id="@+id/textview1"
+            android:layout_below="@+id/title"
+
+            />
+
+        <TextView
+            android:layout_width="189dp"
+            android:layout_height="wrap_content"
+            android:textSize="10pt"
+            android:singleLine="true"
+            android:text="Output Unit"
+            android:id="@+id/textview2"
+            android:layout_marginLeft="10pt"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/group1"
+            >
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="fluidounce"
+                android:id="@+id/ifluidounces" />
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="cup"
+                android:id="@+id/icups"/>
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="pint"
+                android:id="@+id/ipints"/>
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="quart"
+                android:id="@+id/iquarts"/>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Gallon"
+                android:id="@+id/iGallons"/>
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="millilitre"
+                android:id="@+id/imillilitres"/>
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="litre"
+                android:id="@+id/ilitres"/>
+
+        </RadioGroup>
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20pt"
+            android:id="@+id/group2"
+            >
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="fluidounce"
+                android:id="@+id/Ofluidounces"
+                android:checked="false"
+
+                android:singleLine="false"
+                />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="cup"
+                android:id="@+id/Ocups"
+                android:textSize="20dp"
+                android:checked="false" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="pint"
+                android:id="@+id/Opints"
+                android:textSize="20dp"
+                android:checked="false" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="quart"
+                android:id="@+id/Oquarts"
+                android:textSize="20dp"
+                android:checked="false" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="gallon"
+                android:id="@+id/Ogallon"
+                android:textSize="20dp"
+                android:checked="false" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="millilitre"
+                android:id="@+id/Oml"
+                android:textSize="20dp"
+                android:checked="false" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="litre"
+                android:id="@+id/Olitre"
+                android:textSize="20dp"
+                android:checked="false" />
+
+
+        </RadioGroup>
+    </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Do COnversion"
+        android:id="@+id/btnClick"
+        android:clickable="true"
+        android:enabled="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="convert"
+        android:maxLength="50"
+        android:maxWidth="180dp"
+        android:layout_marginLeft="25pt" />
+</LinearLayout>
